@@ -1,0 +1,60 @@
+DATA PROCESSING FOR LABVIEW (AIMING TO CONTROL AN AD-IPR-1201)
+==============================================================
+
+MODULES
+-------
+
+configL.py
+modL.py
+utilL.py
+README.txt
+
+AIM
+-------------
+
+The aim of this project is to provide sufficient data for determining boundary
+location between fluid columns top on each other. The output is a csv file that
+contains alpha values calculated from received signal when sent signal and 
+distance are given. In addition, these alpha values of distinct cycles are
+compared and the ratio between adjecent alpha values is included into the 
+output file. 
+In our project, sent and received signal were produced by an AD-IPR-1210 board 
+that is controlled independently from this software.
+
+DOCUMENTATION
+-------------
+
+Assuming the input is a series of vector, the function handleL takes one at a
+time as argument and do the calculation by the values in that vector; and writes
+output into a csv file. Until the environment of the call is running all data 
+is put into the same csv. 
+
+Sent signal and distance can be pre-set in configL by changing values of mSent 
+and zDistance respectively. The output file is saved into the folder given by
+filePath.
+
+LICENCE
+-------
+
+The MIT License (MIT)
+
+Copyright (c) <2015> <David Nagy - dn69@hw.ac.uk >
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
