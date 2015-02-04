@@ -10,8 +10,9 @@ def updateAlpha(mReceived):
     and mSen sent signal; and multiply this by -1/zDistance distance.
 
     Example;
-    databaseL.calculation(1,2,2)
-    0.34657359027997264
+    input math.e, sent = 1 distance = 1
+    >>>updateAlpha(math.e)
+    >>>-1
     """
     
     configL.alpha = (-float(1)/configL.zDistance)*(math.log(float(mReceived)/configL.mSent))
