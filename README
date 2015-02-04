@@ -18,7 +18,7 @@ contains alpha values calculated from received signal when sent signal and
 distance are given. In addition, these alpha values of distinct cycles are
 compared and the ratio between adjecent alpha values is included into the 
 output file. 
-In our project, sent and received signal were produced by an AD-IPR-1210 board 
+In our project, sent and received signal were processed by an AD-IPR-1210 board 
 that is controlled independently from this software.
 
 DOCUMENTATION
