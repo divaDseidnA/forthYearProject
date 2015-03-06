@@ -1,5 +1,6 @@
 import configL
 import math
+import time
 
 def increaseVal():
     configL.counter += 1
@@ -49,3 +50,21 @@ def updateLabel():
 
 def restartLabel():
     configL.label = 1
+
+def startTimer():
+    configL.timeMeasure = time.clock()
+
+def calcTime():
+    #processor time difference in seconds (float)
+    timeNow = time.clock()
+    configL.timeDifference = timeNow - configL.timeMeasure
+
+def quantityCount():
+    fileL = open(configL.exactPath, 'r')
+    lines = fileL.readlines()
+    fileL.close()
+    counter = 1
+    for e in lines:
+        if 'Sent signal' in e:
+            counter += 1
+    return counter
